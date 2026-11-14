@@ -8,7 +8,7 @@ plugins {
 ext {
     PUBLISH_GROUP_ID = ConfigurationData.publishGroupId
     PUBLISH_ARTIFACT_ID = 'sdk-android'
-    PUBLISH_VERSION = ConfigurationData.versionNameSdk
+    PUBLISH_VERSION = System.getenv('PUBLISH_VERSION_OVERRIDE') ?: ConfigurationData.versionNameSdk
     PUBLISH_DESCRIPTION = 'Android Bindings to the Matrix Rust SDK'
 }
 
